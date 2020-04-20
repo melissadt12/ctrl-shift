@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button } from 'react-native';
 // import Header from './Header';
 import Greeting from './src/components/Greeting';
+import Input from './src/components/Input';
 
 //react-navigation container
 // import 'react-native-gesture-handler';
@@ -16,13 +17,7 @@ import Greeting from './src/components/Greeting';
 
 
 class App extends Component {
-  // constructor(){
-  //   super();
-  //   this.state = {
-  //     greeting= 'Selamat Datang. Welcome'
-  //   }
-  // }
-  
+
   state = {
     greeting: 'Selamat Datang. Welcome'
   }
@@ -32,7 +27,8 @@ class App extends Component {
       <View style={styles.container}>
       <Greeting text={this.state.greeting}/>
       {/* <Header/>  */}
-      <Text>Selamat Datang!</Text>
+      <Text>{this.state.greeting}</Text>
+      <Input/>
     </View>
     )
   }
@@ -41,10 +37,11 @@ class App extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#ffff',
     alignItems: 'center',
     justifyContent: 'center',
   },
 });
+
 
 export default App;
