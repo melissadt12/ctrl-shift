@@ -3,6 +3,8 @@ import { StyleSheet, Text, View, Button } from 'react-native';
 // import Header from './Header';
 import Greeting from './src/components/Greeting';
 import Input from './src/components/Input';
+import Layout from './src/components/Layout';
+import List from './src/components/List';
 
 //react-navigation container
 // import 'react-native-gesture-handler';
@@ -19,17 +21,23 @@ import Input from './src/components/Input';
 class App extends Component {
 
   state = {
-    greeting: 'Selamat Datang. Welcome'
+    greeting: 'React Native'
   }
+
+componentDidMount(){
+}
   
   render(){
     return (
-      <View style={styles.container}>
-      <Greeting text={this.state.greeting}/>
-      {/* <Header/>  */}
-      <Text>{this.state.greeting}</Text>
-      <Input/>
-    </View>
+    //   <View style={styles.container}>
+    //   <Greeting text={this.state.greeting}/>
+    //   {/* <Header/> */}
+    //   <Text>{this.state.greeting}</Text>
+    //   <Input/>
+    //   <Layout/>
+    // </View>
+    // <Layout/>
+    <List/>
     )
   }
 }
